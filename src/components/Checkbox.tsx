@@ -14,7 +14,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
   const toggleCheck = () => {
     const newValue = !check;
     setCheck(newValue);
-    onValueChange(newValue);
+    if (onValueChange) {
+      onValueChange(newValue);
+    }
   };
 
   return (
