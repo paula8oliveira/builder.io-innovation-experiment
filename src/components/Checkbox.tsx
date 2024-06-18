@@ -5,7 +5,7 @@ type CheckboxProps = {
   disabled?: boolean;
 };
 
-const Checkbox: React.FC<CheckboxProps> = ({
+export const Checkbox: React.FC<CheckboxProps> = ({
   onValueChange,
   disabled = false,
 }) => {
@@ -14,7 +14,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
   const toggleCheck = () => {
     const newValue = !check;
     setCheck(newValue);
-    onValueChange(newValue);
+    if (onValueChange) {
+      onValueChange(newValue);
+    }
   };
 
   return (
