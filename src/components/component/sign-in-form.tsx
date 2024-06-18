@@ -101,7 +101,7 @@ export function SignInForm() {
   );
 }
 
-function ChromeIcon(props) {
+function ChromeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -123,7 +123,7 @@ function ChromeIcon(props) {
   );
 }
 
-function TriangleAlertIcon(props) {
+function TriangleAlertIcon(props: any) {
   return (
     <svg
       {...props}
